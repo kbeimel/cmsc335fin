@@ -18,7 +18,7 @@ const searchSchema = new mongoose.Schema({
 
 })
 
-const searchHist = mongoose.model('searchHist', searchSchema);
+const searchHist = mongoose.models.searchHist || mongoose.model('searchHist', searchSchema);
 
 
 router.use((req, res, next) => {
