@@ -3,6 +3,9 @@ html {
     font-size: 14px;
 }
 
+img{
+    padding: 2rem;
+}
 
 h1 {
     font-family: 'Jacquard 12', serif;

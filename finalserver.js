@@ -90,7 +90,8 @@ app.post('/make-search', async (req, res) => { //was submit-application
         res.send(`<!DOCTYPE html>
                 <html lang="en">
                     <head>
-                    <link rel="stylesheet" href="style.css">  
+                    <link rel="stylesheet" href="style.css">
+                    <link href="https://fonts.googleapis.com/css2?family=Amarante&family=Jacquard+12&display=swap" rel="stylesheet">  
                     <meta charset="utf-8" > 
                     <title>Search</title>	
                     </head>
@@ -118,9 +119,21 @@ app.get('/show-history', async (req, res) => {
 
         let answer = "";
 
-        result.forEach(elem => answer += `${elem} <br>`);
+        result.forEach(elem => answer += `${elem.q} <br>`);
         answer += `Found: ${result.length} queries`;
-        res.send(answer);
+        res.send(
+            `<!DOCTYPE html>
+                <html lang="en">
+                    <head>
+                    <link rel="stylesheet" href="style.css">
+                    <link href="https://fonts.googleapis.com/css2?family=Amarante&family=Jacquard+12&display=swap" rel="stylesheet">  
+                    <meta charset="utf-8" > 
+                    <title>Search</title>	
+                    </head>
+                    <h1>View Past searches:</h1>
+                    ${answer}
+                    <br>
+                    <a href="homepage.shtml">back to home</a>`);
     } catch (e) {
         console.error(e);
     }
