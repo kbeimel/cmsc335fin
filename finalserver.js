@@ -34,7 +34,7 @@ const searchSchema = new mongoose.Schema({
 
 })
 
-const searchHist = mongoose.model('searchHist', searchSchema);
+const searchHist = mongoose.models.searchHist || mongoose.model('searchHist', searchSchema);
 
 mongoose.connect(uri, { serverSelectionTimeoutMS: 5000 }).then(() => console.log('mongoose connected')).catch(err => console.error('mongoose error:', err));
 
