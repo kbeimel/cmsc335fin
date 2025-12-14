@@ -11,7 +11,7 @@
 <body>
     <h1>Make a search:</h1>
     <form action="/make-search" method="post">
-        <input type="text" name="search">
+        <input type="text" name="q">
         <button class="minibutton" type="submit">search</button>
         <button class="minibutton" type="reset">clear</button>
     </form>
