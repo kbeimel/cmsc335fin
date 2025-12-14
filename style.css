@@ -1,6 +1,7 @@
 html {
     background-color: #F7E1D7;
     font-size: 14px;
+    font-family: 'Amarante';
 }
 
 img {
@@ -22,6 +23,7 @@ h1 {
 }
 
 ul {
+    size: 4rem;
     font-family: 'Amarante';
     color: #4A5759;
 }

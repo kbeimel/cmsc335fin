@@ -154,11 +154,13 @@ app.post('/clear-history', async (req, res) => {
     <head>
     <link rel="stylesheet" href="style.css">  
     <meta charset="utf-8" > 
+    <link href="https://fonts.googleapis.com/css2?family=Amarante&family=Jacquard+12&display=swap" rel="stylesheet">  
 	<title>Clear History</title>	
 	</head>
     <h1>success.</h1>
     ${numm} queries were removed.
-    <hr>
+    <br>
+    <br>
     <a href="homepage.shtml">back to home</a>`);
     } catch (e) {
         res.send(e);
