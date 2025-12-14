@@ -38,6 +38,8 @@ const searchHist = mongoose.model('searchHist', searchSchema);
 
 mongoose.connect(uri, { serverSelectionTimeoutMS: 5000 }).then(() => console.log('mongoose connected')).catch(err => console.error('mongoose error:', err));
 
+const historyRouter = require(`./exproutes`);
+app.use(historyRouter) ; 
 
 app.get('/', (req, res) => { res.redirect('/homepage.shtml'); });
 
@@ -112,7 +114,7 @@ app.post('/make-search', async (req, res) => { //was submit-application
 
 
 
-app.get('/show-history', async (req, res) => {
+/* app.get('/show-history', async (req, res) => {
 
     try {
         result = await searchHist.find().lean();
@@ -140,7 +142,7 @@ app.get('/show-history', async (req, res) => {
         console.error(e);
     }
 
-});
+}); */
 
 
 app.post('/clear-history', async (req, res) => {
