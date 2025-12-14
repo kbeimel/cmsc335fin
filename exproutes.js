@@ -30,7 +30,7 @@ router.use((req, res, next) => {
 
 router.get(`/show-history`, async (req, res) => {
     try {
-        const results = await searchHist.find().select(`query`).lean();
+        const result = await searchHist.find().select(`query`).lean();
         let listem = ``;
 
         result.forEach(elem => { const quext = elem.query || `N/A`; listem += `<li>${quext} </li>` });
