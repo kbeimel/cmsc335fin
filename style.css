@@ -1,0 +1,69 @@
+html {
+    background-color: #F7E1D7;
+    font-size: 14px;
+}
+
+
+h1 {
+    font-family: 'Jacquard 12', serif;
+    font-size: 3.5rem;
+    color: #4A5759;
+}
+
+#searchpage {
+    background-color: #DEDBD2;
+}
+
+#historypage {
+    background-color: #B0C4B1;
+}
+
+
+
+a {
+    font-weight: bold;
+    font-family: 'Amarante';
+    color: #EDAFB8;
+    padding: 1rem;
+    size: 3rem;
+    border: 2px solid #EDAFB8;
+    border-radius: 1rem;
+    background-color: #fbf1ec;
+    text-decoration: none;
+}
+
+
+button {
+    font-weight: bold;
+    font-family: 'Amarante';
+    color: #EDAFB8;
+    padding: 1rem;
+    size: 3rem;
+    border: 2px solid #EDAFB8;
+    border-radius: 1rem;
+    background-color: #fbf1ec;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #EDAFB8;
+    text-decoration: none;
+
+}
+
+input {
+    padding: .5rem;
+    border: 2px solid #EDAFB8;
+    border-radius: .5rem;
+}
+
+.minibutton {
+    font-family: 'Amarante';
+    color: #EDAFB8;
+    padding: .25rem;
+    size: 1rem;
+    border: 2px solid #EDAFB8;
+    border-radius: 1rem;
+    background-color: #fbf1ec;
+    text-decoration: none;
+}
