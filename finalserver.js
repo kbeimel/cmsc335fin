@@ -120,7 +120,7 @@ app.get('/show-history', async (req, res) => {
         let answer = "";
 
         result.forEach(elem => answer += `<li>${elem.query} </li>`);
-        answer += `Found: ${result.length} queries`;
+        answer += `<em>Found: ${result.length} queries</em>`;
         res.send(
             `<!DOCTYPE html>
                 <html lang="en">

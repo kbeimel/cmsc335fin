@@ -3,7 +3,7 @@ html {
     font-size: 14px;
 }
 
-img{
+img {
     padding: 2rem;
 }
 
@@ -21,7 +21,10 @@ h1 {
     background-color: #B0C4B1;
 }
 
-
+ul {
+    font-family: 'Amarante';
+    color: #4A5759;
+}
 
 a {
     font-weight: bold;
