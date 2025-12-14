@@ -26,7 +26,7 @@ const searchSchema = new mongoose.Schema({
         id: Number,
         title: String,
         artist: String,
-        imageUrl: String
+        imageURL: String
     },
     timestamp: { type: Date, default: Date.now }
 }, {
@@ -78,7 +78,7 @@ app.post('/make-search', async (req, res) => { //was submit-application
             id: artwork.id,
             title: artwork.title,
             artist: artwork.artist_display,
-            imageUrl: imageURL,
+            imageURL: imageURL,
         };
 
         await searchHist.create({
