@@ -119,7 +119,7 @@ app.get('/show-history', async (req, res) => {
 
         let answer = "";
 
-        result.forEach(elem => answer += `${elem.q} <br>`);
+        result.forEach(elem => answer += `<li>${elem.query} </li>`);
         answer += `Found: ${result.length} queries`;
         res.send(
             `<!DOCTYPE html>
@@ -131,7 +131,9 @@ app.get('/show-history', async (req, res) => {
                     <title>Search</title>	
                     </head>
                     <h1>View Past searches:</h1>
+                    <ul>
                     ${answer}
+                    </ul>
                     <br>
                     <a href="homepage.shtml">back to home</a>`);
     } catch (e) {
