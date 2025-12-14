@@ -48,7 +48,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.post('/make-search', async (req, res) => { //was submit-application
 
-    const query = req.body.q;
+    const query = req.body
 
     if (!query) {
         return res.status(400).send("missing search query");
@@ -59,7 +59,7 @@ app.post('/make-search', async (req, res) => { //was submit-application
     try {
         const apiURL = `${API_BASE}?q=${query}&fields=id,title,artist_display,&limit=1`;
 
-        const apiResponse = await axios.get(API_BASE);
+        const apiResponse = await axios.get(apiURL);
         result = await collection.insertOne(query);
 
         const { data, config } = apiResponse.data;
