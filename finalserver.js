@@ -123,7 +123,7 @@ app.get('/show-history', async (req, res) => {
         answer += `<em>Found: ${result.length} queries</em>`;
         res.send(
             `<!DOCTYPE html>
-                <html lang="en">
+                <html lang="en" id="historypage">
                     <head>
                     <link rel="stylesheet" href="style.css">
                     <link href="https://fonts.googleapis.com/css2?family=Amarante&family=Jacquard+12&display=swap" rel="stylesheet">  
