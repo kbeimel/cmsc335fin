@@ -48,7 +48,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.post('/make-search', async (req, res) => { //was submit-application
 
-    const query = req.body.q
+    const query = req.body.q;
 
     if (!query) {
         return res.status(400).send("missing search query");
