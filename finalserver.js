@@ -26,7 +26,7 @@ const searchSchema = new mongoose.Schema({
         id: Number,
         title: String,
         artist: String,
-        imageURL: String
+        imageUrl: String
     },
     timestamp: { type: Date, default: Date.now }
 }, {
@@ -48,7 +48,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.post('/make-search', async (req, res) => { //was submit-application
 
-    const query = req.body
+    const query = req.body.q
 
     if (!query) {
         return res.status(400).send("missing search query");
@@ -57,11 +57,9 @@ app.post('/make-search', async (req, res) => { //was submit-application
     let work = null;
 
     try {
-        const apiURL = `${API_BASE}?q=${query}&fields=id,title,artist_display,&limit=1`;
+        const apiURL = `${API_BASE}?q=${query}&fields=id,title,artist_display,image_id&limit=1`;
 
         const apiResponse = await axios.get(apiURL);
-        result = await collection.insertOne(query);
-
         const { data, config } = apiResponse.data;
 
         if (data.length === 0) {
@@ -82,6 +80,11 @@ app.post('/make-search', async (req, res) => { //was submit-application
             artist: artwork.artist_display,
             imageUrl: imageURL,
         };
+
+        await searchHist.create({
+            query: query,
+            artwork: work
+        });
 
 
         res.send(`<!DOCTYPE html>
